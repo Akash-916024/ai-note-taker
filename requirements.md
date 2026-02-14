@@ -143,3 +143,4 @@ The AI Note Taker is a Chrome extension designed for the AI for Bharat hackathon
 1. Zero-Tracking Policy: The Extension SHALL NOT collect or store user browsing history, cookies, or personal identifiers outside of the specific YouTube URLs explicitly processed by the user.
 2. Session-Only Processing: The Backend_Service SHALL delete any temporary video/audio files from the Google Cloud storage/File API immediately after the summary or quiz is generated.
 3. Safety Filtering: The system SHALL utilize Gemini’s safety settings to block the generation of summaries for videos containing hate speech or harmful content, providing a "Safety Block" notification to the user.
+
