@@ -1,51 +1,136 @@
-🇮🇳 AI Note Taker: Indic-First YouTube Learning Extension
-Bridging the Educational Language Gap with Multimodal AI
+# AI Note Taker – Indic-First Browser Extension 🇮🇳🤖
 
-AI Note Taker is a conceptualized Chrome extension designed for the AI for Bharat 2026 Hackathon. It addresses the challenge of making high-quality YouTube educational content accessible to learners across India by providing automated, localized notes and quizzes in 11+ Indic languages.
-🎯 The Vision
+## Overview
 
-Most educational content on YouTube is in English or high-level Hindi. For students who prefer learning in their mother tongue—be it Tamil, Telugu, Marathi, or Bengali—language becomes a barrier to comprehension.
+**AI Note Taker** is an AI-powered browser extension designed for the **AI for Bharat Hackathon**.  
+It helps students and learners convert long educational **YouTube videos into concise study notes and quizzes**, with **first-class support for Indian (Indic) languages**.
 
-Our project leverages Google Gemini 2.0 Flash to not just transcribe, but visually and auditorily understand video content, translating complex concepts into structured study tools in the user's native language.
-🛠️ Project Workflow (The "Spec-Driven" Approach)
+The project focuses on **accessibility, multilingual learning, privacy, and efficiency**, making quality educational content easier to understand and revise for learners across India.
 
-This repository currently contains the core Technical Specifications and Requirement Framework for the project, following a rigorous development workflow:
-1. Requirement Engineering (requirements.md)
+---
 
-    YouTube Tab Capture: Automatic detection of educational content and metadata extraction.
+## Problem Statement
 
-    Multilingual Summarization: Support for 10+ Indic languages with a "Hindi-first" priority.
+Students in India often depend on long-form educational videos but face challenges such as:
+- Difficulty extracting key points from lengthy lectures
+- Limited support for Indian regional languages
+- Lack of quick revision materials
+- No way to ask contextual questions based on video content
 
-    Smart Quiz Generation: AI-generated MCQs (5 per video) designed to test depth of understanding.
+Existing tools are often English-centric, heavy, or unsuitable for low-resource environments.
 
-    Data Ethics: A strict "Zero-Tracking" policy and safety filters to ensure a secure learning environment.
+---
 
-2. Architectural Design (design.md)
+## Proposed Solution
 
-    Three-Tier Architecture: A React frontend, Node.js backend, and the Google Gemini API.
+AI Note Taker is a **lightweight Chrome extension** that:
+- Automatically captures the currently playing YouTube video
+- Generates **structured summaries** using AI
+- Creates **interactive quizzes** for self-assessment
+- Supports **multiple Indic languages**
+- Works efficiently even on low-end devices
 
-    Multimodal Processing: Instead of simple text transcripts, the system uses the Google AI File API to analyze video frames and audio cues.
+The system uses **Google Gemini’s multimodal AI capabilities** to understand video content and deliver accurate educational outputs.
 
-    Hybrid Language Handling: Specifically designed to handle "Hinglish" and code-switched audio common in Indian classrooms.
+---
 
-    Performance Optimization: 1-hour TTL (Time-To-Live) caching and local storage for offline note access.
+## Key Features
 
-🏗️ Tech Stack (Proposed)
+- 📹 **Automatic YouTube Video Detection**
+- 📝 **AI-Based Video Summarization**
+- ❓ **Smart Quiz Generation (5 MCQs per video)**
+- 🌐 **Multilingual Support (Indic-first)**
+  - English, Hindi, Tamil, Telugu, Malayalam, Marathi, Bengali, Gujarati, Kannada, Punjabi, Odia
+- 💾 **Local History & Caching**
+- 🌙 **Dark / Light Theme Support**
+- 🔒 **Privacy-First Design (No Tracking, No Login)**
 
-    AI Engine: Google Gemini 2.0 Flash (Multimodal)
+---
 
-    Frontend: React + Tailwind CSS (Manifest V3)
+## Architecture Overview
 
-    Backend: Express.js on Google Cloud Run
+The system follows a **three-tier architecture**:
 
-    Language Support: Hindi, Tamil, Marathi, Telugu, Bengali, Gujarati, Kannada, Malayalam, Punjabi, Odia, and English.
+1. **Frontend**  
+   - Chrome Extension (Manifest V3)
+   - React + Tailwind CSS
 
-📂 Repository Contents
+2. **Backend**  
+   - Node.js + Express
+   - Hosted on Google Cloud Run / Firebase
 
-    requirements.md: Detailed User Stories and Acceptance Criteria using EARS notation.
+3. **AI Services**
+   - Google Gemini 2.0 Flash API
+   - YouTube Data API v3
 
-    design.md: Technical blueprints, Mermaid diagrams, and TypeScript data models.
+Detailed architecture, data flow, and component design are documented in `design.md`.
 
-🤝 AI for Bharat 2026
+---
 
-This project is dedicated to the AI for Learning theme, aiming to democratize access to education for 1.4 billion people through the power of Generative AI.
+## AI for Bharat Alignment
+
+This project aligns strongly with **AI for Bharat goals** by:
+
+- 🇮🇳 Supporting **Indian regional languages**
+- 📚 Focusing on **education and learning**
+- 🧠 Using **responsible AI practices**
+- ⚡ Designing for **low-bandwidth and low-resource environments**
+- 🔓 Being **open-source friendly**
+
+---
+
+## Repository Contents
+
+---
+
+## How the System Works (High Level)
+
+1. User opens a YouTube video
+2. User clicks the extension icon
+3. The extension captures the video URL
+4. Backend sends the video to Gemini AI for processing
+5. AI generates:
+   - A structured summary
+   - A quiz with explanations
+6. Output is displayed in the selected Indic language
+7. Results are cached locally for fast access
+
+---
+
+## Privacy & Responsible AI
+
+- No user login required
+- No tracking or analytics without consent
+- No storage of personal user data
+- Temporary AI processing files are deleted after use
+- AI safety filters are enabled to block harmful content
+
+---
+
+## Future Enhancements
+
+- Offline access to saved summaries
+- Export notes as PDF or Markdown
+- Timestamp-based navigation
+- Voice-based summaries
+- Support for additional platforms beyond YouTube
+- Firefox and Edge browser support
+
+---
+
+## Hackathon Information
+
+- **Event**: AI for Bharat Hackathon
+- **Submission Includes**:
+  - `requirements.md` (Generated via Kiro – Spec)
+  - `design.md` (Generated via Kiro – Design)
+  - Presentation deck (submitted separately)
+
+---
+
+## Team
+
+Developed as part of the **AI for Bharat Hackathon**  
+Focused on building inclusive, AI-powered educational tools for India 🇮🇳
+
+---
